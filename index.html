@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Bubble Finder</title>
 </head>
+
 <body>
-    <h1>I find bubbles</h1>
-    <input type="file" id="saveFile">
+    <h1>Bubble Finder Tool for Stardew Valley</h1>
+    <h4>How to use:</h4>
+    <ol>
+        <li>Upload your save file.</li>
+        <li>Hover over bubbles in list to see their location on the map</li>
+    </ol>
+    <h4>Tips:</h4>
+    <ul>
+        <li>Change the viewed day by inputing a new one!</li>
+        <li>Change the location viewed in the dropdown menu!</li>
+    </ul>
+    <input type="file" id="saveFile"><br>
+    <input type="number" id="dayInput" min="1" step="1" size="5" placeholder="Day"><br>
+    <select id="locationSelect">
+        <option value="Mountain">Mountain</option>
+        <option value="Town">Town</option>
+        <option value="Forest">Forest</option>
+        <option value="Beach">Beach</option>
+    </select>
+    <div id="output"></div>
+    <canvas id="canvas"></canvas>
+    <img id="ForestImg" src="forestQ.png">
+    <img id="TownImg" src="townQ.png">
+    <img id="MountainImg" src="mountainQ.png">
+    <img id="BeachImg" src="beachQ.png">
 
     <script src="locations.js"></script>
     <script src="CSRandom.js"></script>
-    <script src="bubbleFinder.js"></script>
+    <script defer src="bubbleFinder.js"></script>
+    <footer>Images are downscaled screenshots from the game Stardew Valley and their copyright is held by Concerned Ape.</footer>
 </body>
+
 </html>

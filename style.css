@@ -1,0 +1,6 @@
+img {
+    display: none;
+}
+input[type=number]{
+    width: 3em;
+} 
